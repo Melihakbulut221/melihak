@@ -1,0 +1,19 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <stdio.h>
+ int main(){
+ char s[100];
+  gets(s);
+  int difference='a'-'A'//the ASCII values of a is 97 but ASCII values of A is 65
+  int i,len;
+  len=strlen(s);
+  for(i=0;i<len;i++){
+  if(s[i]>='A' && s[i]<='Z'){
+  s[i]=s[i]+difference;
+  }
+  else if(s[i]>='a' && s[i]<='z'){
+  s[i]=s[i]-difference;
+  }
+  }
+  puts(s);
+  }
